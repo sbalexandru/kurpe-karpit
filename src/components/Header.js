@@ -1,10 +1,12 @@
 import React from "react";
-import { Containter } from "./Header.styled";
+import { Container } from "./Header.styled";
 
 const Header = () => {
-  <Containter>
-    ceva<p>header</p>
-  </Containter>;
+  return (
+    <Container>
+      <p>ceva head</p>
+    </Container>
+  );
 };
 
 export default Header;

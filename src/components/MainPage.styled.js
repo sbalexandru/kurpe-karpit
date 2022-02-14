@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const Containter = styled.div`
-  width: 100%;
+export const Container = styled.div`
   margin: 0 auto;
-  height: 500px;
+  width: 100%;
+  height: 120rem;
   border: 1px solid black;
 `;
