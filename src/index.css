@@ -69,4 +69,19 @@ ul,
 ol {
   list-style-type: none;
 }
+
 /* End Reset */
+
+/* Fonts import */
+@import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Faster+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap");
+/* End Fonts */
+
+/*
+ font-family: "Limelight", cursive;
+ font-family: 'Monoton', cursive;
+ font-family: 'Faster One', cursive;
+ font-family: 'Diplomata SC', cursive;
+ */

@@ -1,10 +1,13 @@
 import React from "react";
-import { Container } from "./Header.styled";
+import { Container, Title } from "./Header.styled";
 
 const Header = () => {
   return (
     <Container>
-      <p>ceva head</p>
+      <Title>
+        KURPÉ <br />
+        <span>KARPIT</span>
+      </Title>
     </Container>
   );
 };
