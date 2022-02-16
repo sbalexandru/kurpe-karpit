@@ -3,7 +3,9 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: 10rem;
-  border: 1px solid black;
+  border: 3px solid #ff1717;
+  border-radius: 5px;
+  border-style: dashed;
   text-align: center;
   background-color: black;
 `;
