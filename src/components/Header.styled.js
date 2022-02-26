@@ -8,6 +8,8 @@ export const Container = styled.div`
   border-style: dashed;
   text-align: center;
   background-color: black;
+  position: fixed;
+  top: 0;
 `;
 
 export const Title = styled.h2`
@@ -15,7 +17,7 @@ export const Title = styled.h2`
   font-size: 6rem;
   font-weight: 900;
   color: #0bcbcc;
-  font-family: "Limelight", cursive;
+  /* font-family: "Limelight", cursive; */
   span {
     color: #f18ce1;
   }
