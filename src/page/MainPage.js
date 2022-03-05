@@ -1,16 +1,23 @@
 import React from "react";
 import {
   Container,
-  //  ImageBox
+  WheelBox,
+  KarpitBox,
+  StartImage,
+  ImageBox,
 } from "./MainPage.styled";
-// import { Images } from "../components/Images";
+import { Images } from "../components/Images";
 
 const MainPage = () => {
   return (
     <Container>
-      {/* <ImageBox src={Images.Wheel} alt="sofa" /> */}
-      {/* <p>ceva main</p> */}
-      {/* <ImageBox src={Images.Seat} alt="sofa" /> */}
+      <StartImage />
+      <WheelBox>
+        <ImageBox src={Images.Wheel} alt="Wheel" />
+      </WheelBox>
+      <KarpitBox>
+        <ImageBox src={Images.Seat} alt="Karpit" />
+      </KarpitBox>
     </Container>
   );
 };
