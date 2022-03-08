@@ -29,13 +29,30 @@ export const ImageBox = styled.img`
   height: 20rem;
 `;
 
+export const AbautBox = styled.div`
+  width: 80%;
+  height: 200px;
+  margin: 20px 0;
+  border: 2px solid green;
+  background-color: pink;
+`;
+
+export const Title = styled.h2`
+  color: red;
+`;
+
+export const TextAreea = styled.p`
+  color: green;
+  font-size: 19px;
+`;
+
 export const WheelBox = styled.div`
   width: 80%;
   height: 200px;
   border: 2px solid pink;
   margin: 100px;
   clip-path: polygon(0 0, 100% 15%, 100% 99%, 0% 100%);
-  background: ;
+  background-color: green;
 `;
 
 export const KarpitBox = styled.div`
@@ -46,5 +63,5 @@ export const KarpitBox = styled.div`
   display: flex;
   justify-content: flex-end;
   clip-path: polygon(0 15%, 100% 0%, 100% 99%, 0% 100%);
+  background-color: grey;
 `;
-export const TextBox = styled.div``;
