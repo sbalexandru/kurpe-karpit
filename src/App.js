@@ -1,18 +1,45 @@
+import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import MainPage from "./page/MainPage";
-// import CarSection from "./page/CarSection";
-// import KarpitSection from "./page/KarpitSection";
+import WheelPage from "./page/WheelPage";
+import KarpitPage from "./page/KarpitPage";
 
 function App() {
   return (
-    <>
-      <Header />
-      <MainPage />
-      {/* <CarSection />
-      <KarpitSection /> */}
-      <Footer />
-    </>
+    <Routes>
+      <Route
+        path="/"
+        exact
+        element={
+          <>
+            <Header />
+            <MainPage />
+            <Footer />
+          </>
+        }
+      ></Route>
+      <Route
+        path="/WheelPage"
+        element={
+          <>
+            <Header />
+            <WheelPage />
+            <Footer />
+          </>
+        }
+      ></Route>
+      <Route
+        path="/KarpitPage"
+        element={
+          <>
+            <Header />
+            <KarpitPage />
+            <Footer />
+          </>
+        }
+      ></Route>
+    </Routes>
   );
 }
 

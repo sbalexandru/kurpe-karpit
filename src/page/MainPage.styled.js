@@ -9,6 +9,9 @@ export const Container = styled.div`
   justify-content: space-evenly;
   align-items: center;
   align-content: stretch;
+  .link-box {
+    width: 100%;
+  }
 `;
 
 export const StartImage = styled.div`
@@ -27,6 +30,7 @@ export const StartImage = styled.div`
 export const ImageBox = styled.img`
   width: 20rem;
   height: 20rem;
+  margin: 20px;
 `;
 
 export const AbautBox = styled.div`
@@ -39,29 +43,35 @@ export const AbautBox = styled.div`
 
 export const Title = styled.h2`
   color: red;
+  padding: 20px;
 `;
 
 export const TextAreea = styled.p`
-  color: green;
+  color: white;
   font-size: 19px;
 `;
 
 export const WheelBox = styled.div`
-  width: 80%;
-  height: 200px;
+  width: 40%;
+  position: relative;
+  left: 20%;
   border: 2px solid pink;
   margin: 100px;
   clip-path: polygon(0 0, 100% 15%, 100% 99%, 0% 100%);
-  background-color: green;
+  background-color: pink;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const KarpitBox = styled.div`
-  width: 80%;
-  height: 200px;
+  width: 40%;
+  /* height: 200px; */
   border: 2px solid white;
   margin: 100px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   clip-path: polygon(0 15%, 100% 0%, 100% 99%, 0% 100%);
   background-color: grey;
 `;
