@@ -27,6 +27,21 @@ export const StartImage = styled.div`
   background-size: cover;
 `;
 
+export const SecondImg = styled.div`
+  width: 100%;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-image: url(${Images.SecondBackImg});
+  background-position: cover;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+`;
+
 export const ImageBox = styled.img`
   width: 20rem;
   height: 20rem;
@@ -37,8 +52,8 @@ export const AbautBox = styled.div`
   width: 80%;
   height: 200px;
   margin: 20px 0;
-  border: 2px solid green;
-  background-color: pink;
+  /* border: 2px solid green; */
+  /* background-color: pink; */
 `;
 
 export const Title = styled.h2`
@@ -51,27 +66,39 @@ export const TextAreea = styled.p`
   font-size: 19px;
 `;
 
+export const TextBox = styled.div`
+  font-size: 19px;
+`;
+
 export const WheelBox = styled.div`
-  width: 40%;
-  position: relative;
-  left: 20%;
-  border: 2px solid pink;
-  margin: 100px;
-  clip-path: polygon(0 0, 100% 15%, 100% 99%, 0% 100%);
-  background-color: pink;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
+  a {
+    width: 40%;
+    position: relative;
+    left: 15%;
+    /* border: 2px solid pink; */
+    margin: 100px;
+    clip-path: polygon(0 0, 100% 15%, 100% 99%, 0% 100%);
+    background-color: pink;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 `;
 
 export const KarpitBox = styled.div`
-  width: 40%;
-  /* height: 200px; */
-  border: 2px solid white;
-  margin: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  clip-path: polygon(0 15%, 100% 0%, 100% 99%, 0% 100%);
-  background-color: grey;
+  width: 100%;
+  a {
+    width: 40%;
+    position: relative;
+    left: 30%;
+    /* height: 200px; */
+    /* border: 2px solid white; */
+    margin: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    clip-path: polygon(0 15%, 100% 0%, 100% 99%, 0% 100%);
+    background-color: grey;
+  }
 `;

@@ -5,15 +5,15 @@ export const Container = styled.div`
   margin: 0 auto;
   min-height: 10rem;
   position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   top: 0;
   transition: all 0.5s;
   text-align: center;
   width: 100%;
   z-index: 999;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
   &.active {
     transition: all 0.5s;
     border: 3px solid #2129f7;
@@ -49,7 +49,9 @@ export const Title = styled.h2`
 
 export const BtnSection = styled.div`
   display: none;
+  /* transition: all 0.5s; */
   &.active {
+    /* transition: all 0.5s; */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -61,7 +63,7 @@ export const BtnSection = styled.div`
 export const Button = styled.div`
   width: 50px;
   height: 50px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin: 10px;
   img {
     width: 50px;

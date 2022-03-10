@@ -20,13 +20,13 @@ const Header = () => {
       <BtnSection className={navbar ? "navbar active" : "navbar"}>
         <NavLink to="/">
           <Button>
-            <p>home</p>
+            <img src={Images.House} alt="House" />
           </Button>
         </NavLink>
 
         <NavLink to="/WheelPage">
           <Button>
-            <img src={Images.Wheel} alt="wheel" />
+            <img src={Images.LineWheel} alt="wheel" />
           </Button>
         </NavLink>
 
