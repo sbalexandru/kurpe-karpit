@@ -63,8 +63,8 @@ export const Button = styled.div`
   height: 50px;
   border: 1px solid red;
   margin: 10px;
-  p {
-    margin: auto;
-    text-align: center;
+  img {
+    width: 50px;
+    height: 50px;
   }
 `;

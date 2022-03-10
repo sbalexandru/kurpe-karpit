@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container, Title, Button, BtnSection } from "./Header.styled";
 import { NavLink } from "react-router-dom";
+import { Images } from "./Images";
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
@@ -25,13 +26,13 @@ const Header = () => {
 
         <NavLink to="/WheelPage">
           <Button>
-            <p>Wheel</p>
+            <img src={Images.Wheel} alt="wheel" />
           </Button>
         </NavLink>
 
         <NavLink to="/KarpitPage">
           <Button>
-            <p>Karpit</p>
+            <img src={Images.Seat} alt="karpit" />
           </Button>
         </NavLink>
       </BtnSection>
