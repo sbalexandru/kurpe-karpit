@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import MainPage from "./page/MainPage";
 import WheelPage from "./page/WheelPage";
 import KarpitPage from "./page/KarpitPage";
+import SofaPage from "./page/SofaPage";
 
 function App() {
   return (
@@ -35,6 +36,16 @@ function App() {
           <>
             <Header />
             <KarpitPage />
+            <Footer />
+          </>
+        }
+      ></Route>
+      <Route
+        path="/SofaPage"
+        element={
+          <>
+            <Header />
+            <SofaPage />
             <Footer />
           </>
         }

@@ -1,10 +1,10 @@
 import React from "react";
-import { Container, Creator } from "./Footer.styled";
+import { Container, Creator, Contact } from "./Footer.styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//   faFacebookSquare,
-//   faInstagram,
-// } from "@fortawesome/free-brands-svg-icons";
+import {
+  faFacebookSquare,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
 
 import {
   // faEnvelope,
@@ -14,7 +14,11 @@ import {
 const Footer = () => {
   return (
     <Container>
-      <p>ceva foot</p>
+      <Contact>
+        <FontAwesomeIcon className="social facebook" icon={faFacebookSquare} />
+        <FontAwesomeIcon className="social insta" icon={faInstagram} />
+      </Contact>
+
       <Creator>
         <FontAwesomeIcon icon={faCopyright} />
         <a href="https://alex-code.netlify.app/" alt="Creator">

@@ -19,7 +19,7 @@ export const Container = styled.div`
     border: 3px solid #2129f7;
     border-radius: 5px;
     border-style: dashed;
-    background: #2a2a2aca;
+    background: #000000ca;
   }
 `;
 
@@ -49,14 +49,12 @@ export const Title = styled.h2`
 
 export const BtnSection = styled.div`
   display: none;
-  /* transition: all 0.5s; */
   &.active {
-    /* transition: all 0.5s; */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 30%;
+    width: 20%;
   }
 `;
 
@@ -68,5 +66,13 @@ export const Button = styled.div`
   img {
     width: 50px;
     height: 50px;
+  }
+  .hiden.active {
+    display: none;
+  }
+  .home {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
   }
 `;

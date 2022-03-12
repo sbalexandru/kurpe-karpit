@@ -15,24 +15,37 @@ const Header = () => {
   };
   window.addEventListener("scroll", changeBackground);
 
+  // function IsHome() {
+  const IsHome = true;
+  // }
+
   return (
     <Container className={navbar ? "navbar active" : "navbar"}>
       <BtnSection className={navbar ? "navbar active" : "navbar"}>
-        <NavLink to="/">
+        <NavLink
+          to="/"
+          className={navbar && IsHome === true ? "navbar active" : "hiden"}
+        >
           <Button>
-            <img src={Images.House} alt="House" />
+            <img className="home" src={Images.House} alt="House" />
           </Button>
         </NavLink>
 
         <NavLink to="/WheelPage">
           <Button>
-            <img src={Images.LineWheel} alt="wheel" />
+            <img src={Images.Wheel} alt="wheel" />
           </Button>
         </NavLink>
 
         <NavLink to="/KarpitPage">
           <Button>
-            <img src={Images.Seat} alt="karpit" />
+            <img src={Images.SeatLight} alt="karpit" />
+          </Button>
+        </NavLink>
+
+        <NavLink to="/SofaPage">
+          <Button>
+            <img className="sofa" src={Images.Sofa} alt="sofa" />
           </Button>
         </NavLink>
       </BtnSection>

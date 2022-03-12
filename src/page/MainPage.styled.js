@@ -47,13 +47,16 @@ export const ImageBox = styled.img`
   height: 20rem;
   margin: 20px;
 `;
+export const ImageBoxSofa = styled.img`
+  height: 15rem;
+  margin: 20px;
+`;
 
 export const AbautBox = styled.div`
   width: 80%;
   height: 200px;
   margin: 20px 0;
-  /* border: 2px solid green; */
-  /* background-color: pink; */
+  text-align: center;
 `;
 
 export const Title = styled.h2`
@@ -76,10 +79,9 @@ export const WheelBox = styled.div`
     width: 40%;
     position: relative;
     left: 15%;
-    /* border: 2px solid pink; */
     margin: 100px;
     clip-path: polygon(0 0, 100% 15%, 100% 99%, 0% 100%);
-    background-color: pink;
+    background-color: black;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -92,13 +94,26 @@ export const KarpitBox = styled.div`
     width: 40%;
     position: relative;
     left: 30%;
-    /* height: 200px; */
-    /* border: 2px solid white; */
     margin: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     clip-path: polygon(0 15%, 100% 0%, 100% 99%, 0% 100%);
-    background-color: grey;
+    background-color: black;
+  }
+`;
+
+export const SofaBox = styled.div`
+  width: 100%;
+  a {
+    width: 40%;
+    position: relative;
+    left: 15%;
+    margin: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    clip-path: polygon(0 0, 100% 15%, 100% 99%, 0% 100%);
+    background-color: black;
   }
 `;

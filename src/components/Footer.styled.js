@@ -8,6 +8,9 @@ export const Container = styled.div`
   border-radius: 5px;
   border-style: dashed;
   background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const Creator = styled.div`
@@ -25,5 +28,24 @@ export const Creator = styled.div`
   a {
     text-decoration: none;
     color: inherit;
+  }
+`;
+
+export const Contact = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: stretch;
+  font-size: 40px;
+  .social {
+    margin: 10px;
+  }
+  .facebook {
+    color: #1778f2;
+  }
+  .insta {
+    color: orange;
   }
 `;

@@ -4,6 +4,8 @@ import {
   WheelBox,
   KarpitBox,
   AbautBox,
+  SofaBox,
+  ImageBoxSofa,
   TextAreea,
   Title,
   StartImage,
@@ -26,7 +28,7 @@ const MainPage = () => {
 
         <WheelBox>
           <Link to="/WheelPage">
-            <ImageBox src={Images.LineWheel} alt="Wheel" />
+            <ImageBox src={Images.Wheel} alt="Wheel" />
             <TextBox>
               <Title>Kurpe Volan</Title>
               <TextAreea>Eszt tekertd meg mint az alat</TextAreea>
@@ -43,6 +45,16 @@ const MainPage = () => {
             <ImageBox src={Images.Seat} alt="Karpit" />
           </Link>
         </KarpitBox>
+
+        <SofaBox>
+          <Link to="/SofaPage">
+            <ImageBoxSofa src={Images.Sofa} alt="SofaBox" />
+            <TextBox>
+              <Title>Kurpe Istike</Title>
+              <TextAreea>Supegy bele mint az alat</TextAreea>
+            </TextBox>
+          </Link>
+        </SofaBox>
       </SecondImg>
     </Container>
   );
