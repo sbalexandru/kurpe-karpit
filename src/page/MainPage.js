@@ -42,7 +42,7 @@ const MainPage = () => {
               <Title>Kurpe Istike</Title>
               <TextAreea>Supegy bele mint az alat</TextAreea>
             </TextBox>
-            <ImageBox src={Images.Seat} alt="Karpit" />
+            <ImageBox src={Images.SeatLight2} alt="Karpit" />
           </Link>
         </KarpitBox>
 

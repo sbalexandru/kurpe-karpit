@@ -6,6 +6,7 @@ import LineWheel from "../img/line-wheel2.png";
 import House from "../img/house neon.png";
 import SecondBackImg from "../img/miami3.jpg";
 import SeatLight from "../img/set2.png";
+import SeatLight2 from "../img/set1.png";
 import SofaNeon from "../img/sofa neon.png";
 import SofaNeon2 from "../img/sofa neon2.png";
 
@@ -14,6 +15,7 @@ export const Images = {
   Wheel,
   Seat,
   SeatLight,
+  SeatLight2,
   SofaNeon,
   Background,
   LineWheel,
