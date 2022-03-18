@@ -1,10 +1,9 @@
 import React from "react";
 import {
   Container,
-  WheelBox,
-  KarpitBox,
   AbautBox,
-  SofaBox,
+  RightBox,
+  LeftBox,
   ImageBoxSofa,
   TextAreea,
   Title,
@@ -26,7 +25,7 @@ const MainPage = () => {
           <TextAreea>Varok szabok mint az alat</TextAreea>
         </AbautBox>
 
-        <WheelBox>
+        <RightBox>
           <Link to="/WheelPage">
             <ImageBox src={Images.Wheel} alt="Wheel" />
             <TextBox>
@@ -34,9 +33,9 @@ const MainPage = () => {
               <TextAreea>Eszt tekertd meg mint az alat</TextAreea>
             </TextBox>
           </Link>
-        </WheelBox>
+        </RightBox>
 
-        <KarpitBox>
+        <LeftBox>
           <Link to="/KarpitPage">
             <TextBox>
               <Title>Kurpe Istike</Title>
@@ -44,9 +43,9 @@ const MainPage = () => {
             </TextBox>
             <ImageBox src={Images.SeatLight2} alt="Karpit" />
           </Link>
-        </KarpitBox>
+        </LeftBox>
 
-        <SofaBox>
+        <RightBox>
           <Link to="/SofaPage">
             <ImageBoxSofa src={Images.Sofa} alt="SofaBox" />
             <TextBox>
@@ -54,7 +53,7 @@ const MainPage = () => {
               <TextAreea>Supegy bele mint az alat</TextAreea>
             </TextBox>
           </Link>
-        </SofaBox>
+        </RightBox>
       </SecondImg>
     </Container>
   );

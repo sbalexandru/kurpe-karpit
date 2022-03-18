@@ -1,3 +1,4 @@
+// used on the site
 import Sofa from "../img/sofa neon3.png";
 import Wheel from "../img/steering.png";
 import Seat from "../img/auto seat.png";

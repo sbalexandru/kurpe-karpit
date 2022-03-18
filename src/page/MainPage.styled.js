@@ -46,10 +46,17 @@ export const ImageBox = styled.img`
   width: 20rem;
   height: 20rem;
   margin: 20px;
+  @media (max-width: 760px) {
+    width: 10rem;
+    height: 10rem;
+  }
 `;
 export const ImageBoxSofa = styled.img`
   height: 15rem;
   margin: 20px;
+  @media (max-width: 760px) {
+    height: 5rem;
+  }
 `;
 
 export const AbautBox = styled.div`
@@ -73,47 +80,71 @@ export const TextBox = styled.div`
   font-size: 19px;
 `;
 
-export const WheelBox = styled.div`
+export const RightBox = styled.div`
   width: 100%;
+  margin: 100px;
+
   a {
-    width: 40%;
+    width: 50%;
     position: relative;
     left: 15%;
-    margin: 100px;
+    /* margin: 100px; */
     clip-path: polygon(0 0, 100% 15%, 100% 99%, 0% 100%);
-    background-color: black;
+    background-color: #000000e6;
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
+  @media (max-width: 760px) {
+    margin: 30px 20px;
+    a {
+      flex-direction: column;
+      width: 90%;
+      left: 9%;
+      clip-path: polygon(0 0, 100% 7%, 100% 99%, 0% 100%);
+    }
+  }
+  @media (max-width: 360px) {
+    margin: 30px 0;
+    a {
+      flex-direction: column;
+      width: 100%;
+      left: 0%;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+  }
 `;
 
-export const KarpitBox = styled.div`
+export const LeftBox = styled.div`
   width: 100%;
+  margin: 100px;
+
   a {
-    width: 40%;
+    width: 50%;
     position: relative;
-    left: 30%;
-    margin: 100px;
+    left: 45%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     clip-path: polygon(0 15%, 100% 0%, 100% 99%, 0% 100%);
-    background-color: black;
+    background-color: #000000e6;
   }
-`;
-
-export const SofaBox = styled.div`
-  width: 100%;
-  a {
-    width: 40%;
-    position: relative;
-    left: 15%;
-    margin: 100px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    clip-path: polygon(0 0, 100% 15%, 100% 99%, 0% 100%);
-    background-color: black;
+  @media (max-width: 760px) {
+    margin: 30px 20px;
+    a {
+      flex-direction: column;
+      width: 90%;
+      left: 1%;
+      clip-path: polygon(0 7%, 100% 0, 100% 99%, 0% 100%);
+    }
+  }
+  @media (max-width: 360px) {
+    margin: 30px 0;
+    a {
+      flex-direction: column;
+      width: 100%;
+      left: 0%;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
   }
 `;

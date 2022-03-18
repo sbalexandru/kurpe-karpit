@@ -51,10 +51,20 @@ export const BtnSection = styled.div`
   display: none;
   &.active {
     display: flex;
+    color: #ffffff;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     width: 20%;
+    @media (max-width: 360px) {
+      display: none;
+    }
+  }
+  &.drop-logo {
+    display: none;
+    @media (max-width: 360px) {
+      display: block;
+    }
   }
 `;
 
@@ -68,11 +78,44 @@ export const Button = styled.div`
     height: 50px;
   }
   .hiden.active {
-    display: none;
+    display: none !important;
   }
   .home {
     width: 40px;
     height: 40px;
     margin-top: 5px;
   }
+`;
+
+export const Dropdown = styled.div`
+  width: 30%;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  border: 3px solid #2129f7;
+  border-radius: 5px;
+  border-style: dashed;
+  background: #000000ca;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 0.5s;
+  z-index: 999;
+`;
+
+export const MeniuDropdown = styled.div`
+  color: #ffffff;
+  background-color: #ffffff;
+  margin: 5px;
+  font-size: 2rem;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.2rem;
+  height: 3rem;
+  border: 1px solid black;
+  background-color: #ffffff;
+  transition-duration: 0.4s;
 `;
