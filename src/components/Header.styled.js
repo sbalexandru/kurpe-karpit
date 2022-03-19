@@ -44,11 +44,12 @@ export const BtnSection = styled.div`
   display: none;
   &.active {
     display: flex;
-    color: #ffffff;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     width: 20%;
+    position: absolute;
+    left: 50px;
     @media (max-width: 360px) {
       display: none;
     }
@@ -87,15 +88,13 @@ export const MeniuDropdown = styled.div`
   @media (max-width: 900px) {
     color: #2f5ef3;
     padding: 20px 30px;
-    font-size: 2rem;
-    border-radius: 3px;
+    font-size: 4rem;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 5.2rem;
     height: 3rem;
-    border: 2px dashed #0bcbcc;
     border-radius: 5px;
     background-color: #000000ca;
     transition-duration: 0.4s;
@@ -112,7 +111,6 @@ export const MeniuDropdown = styled.div`
 export const DropDownWrap = styled.div`
   position: absolute;
   top: 108%;
-
   border: 2px dashed #f18ce1;
   background-color: #000000ca;
   overflow: hidden;
@@ -120,5 +118,52 @@ export const DropDownWrap = styled.div`
   border-radius: 5px;
   .hiden.active {
     display: none !important;
+  }
+`;
+
+export const LanguageDropdown = styled.div`
+  display: none;
+  &.active {
+    display: block;
+    position: absolute;
+    right: 40px;
+    top: 17px;
+    font-size: 4rem;
+    color: #ffffff;
+    cursor: pointer;
+  }
+`;
+
+export const LanguageBtn = styled.div`
+  width: 6rem;
+  position: relative;
+  border: 2px dashed #fb0008;
+  border-radius: 5px;
+  top: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  .hiden.active {
+    display: none !important;
+  }
+`;
+
+export const LanguageItem = styled.div`
+  width: 50px;
+
+  .hiden.active {
+    display: none !important;
+  }
+
+  span {
+    width: 3rem;
+    height: 2.5rem;
+  }
+  p {
+    font-size: 1.3rem;
+    margin: auto;
+    /* padding: 3px; */
+    color: #ffffff;
   }
 `;

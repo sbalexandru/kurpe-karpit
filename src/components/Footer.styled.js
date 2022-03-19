@@ -46,6 +46,6 @@ export const Contact = styled.div`
     color: #1778f2;
   }
   .insta {
-    color: orange;
+    color: orangered;
   }
 `;
