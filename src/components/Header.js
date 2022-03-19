@@ -4,20 +4,17 @@ import {
   Title,
   Button,
   BtnSection,
-  // Dropdown,
-  // MeniuDropdown,
+  MeniuDropdown,
+  DropDownWrap,
 } from "./Header.styled";
 import { NavLink } from "react-router-dom";
 import { Images } from "./Images";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//   faFacebookSquare,
-//   faInstagram,
-// } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faAlignCenter } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
-  // const [isClicked, setIsClicked] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const changeBackground = () => {
     if (window.scrollY >= 100) {
@@ -28,9 +25,9 @@ const Header = () => {
   };
   window.addEventListener("scroll", changeBackground);
 
-  // const clickDropdown = () => {
-  //   setIsClicked(false);
-  // };
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
   return (
     <Container className={navbar ? "navbar active" : "navbar"}>
@@ -60,129 +57,47 @@ const Header = () => {
         </NavLink>
       </BtnSection>
 
-      {/* <MeniuDropdown onClick={() => clickDropdown(isClicked)}>
-        {isClicked === false ? (
-          <FontAwesomeIcon icon={faFacebookSquare} />
+      <MeniuDropdown
+        onClick={() => setMenuOpen(!menuOpen)}
+        className={navbar ? "active" : "hiden"}
+      >
+        {menuOpen === false ? (
+          <FontAwesomeIcon icon={faBars}>
+            {console.log("inchis")}
+          </FontAwesomeIcon>
         ) : (
-          <FontAwesomeIcon className="social insta" icon={faInstagram} />
+          <FontAwesomeIcon icon={faAlignCenter}>
+            {console.log("deschis")}{" "}
+          </FontAwesomeIcon>
         )}
-        {isClicked && (
-          <Dropdown className={isClicked ? "" : ""}>
-            <NavLink
-              to="/"
-              className={navbar ? "navbar active" : "navbar hiden"}
-            >
-              <Button>
+        {menuOpen && (
+          <DropDownWrap className={navbar ? "active" : "navbar"}>
+            <NavLink to="/">
+              <Button onClick={() => closeMenu()}>
                 <img className="home" src={Images.House} alt="House" />
               </Button>
             </NavLink>
+
             <NavLink to="/WheelPage">
-              <Button>
+              <Button onClick={() => closeMenu()}>
                 <img src={Images.Wheel} alt="wheel" />
               </Button>
             </NavLink>
+
             <NavLink to="/KarpitPage">
-              <Button>
+              <Button onClick={() => closeMenu()}>
                 <img src={Images.SeatLight} alt="karpit" />
               </Button>
             </NavLink>
+
             <NavLink to="/SofaPage">
-              <Button>
+              <Button onClick={() => closeMenu()}>
                 <img className="sofa" src={Images.Sofa} alt="sofa" />
               </Button>
             </NavLink>
-          </Dropdown>
-        )}
-      </MeniuDropdown>
-
-      <MeniuDropdown onClick={() => setMenuOpen(!menuOpen)}>
-        {menuOpen === false ? (
-          <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>
-        ) : (
-          <FontAwesomeIcon icon={faAlignCenter}></FontAwesomeIcon>
-        )}
-        {menuOpen && (
-          <DropDownWrap>
-            <Link
-              activeClass="active"
-              to="home"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              <DropDownItem onClick={() => closeMenu()}>
-                <p>{i18n.t("header.navbar.home")}</p>
-              </DropDownItem>
-            </Link>
-
-            <Link
-              activeClass="active"
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              <DropDownItem onClick={() => closeMenu()}>
-                <p>{i18n.t("header.navbar.about")}</p>
-              </DropDownItem>
-            </Link>
-
-            <Link
-              activeClass="active"
-              to="programs"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              <DropDownItem onClick={() => closeMenu()}>
-                <p>{i18n.t("header.navbar.programs")}</p>
-              </DropDownItem>
-            </Link>
-
-            <Link
-              activeClass="active"
-              to="opinion"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              <DropDownItem onClick={() => closeMenu()}>
-                <p>{i18n.t("header.navbar.opinion")}</p>
-              </DropDownItem>
-            </Link>
-
-            <Link
-              activeClass="active"
-              to="sponsor"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              <DropDownItem onClick={() => closeMenu()}>
-                <p>{i18n.t("header.navbar.sponsor")}</p>
-              </DropDownItem>
-            </Link>
-
-            <Link
-              activeClass="active"
-              to="contacts"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              <DropDownItem onClick={() => closeMenu()}>
-                <p>{i18n.t("header.navbar.contacts")}</p>
-              </DropDownItem>
-            </Link>
           </DropDownWrap>
         )}
-      </MeniuDropdown> */}
+      </MeniuDropdown>
 
       <Title className={navbar ? "navbar active" : "navbar"}>
         KURPÉ <br />

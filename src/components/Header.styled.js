@@ -23,16 +23,6 @@ export const Container = styled.div`
   }
 `;
 
-// export const Container = styled.div`
-//   text-align: center;
-//   width: 96%;
-//   margin: auto;
-//   padding: 1rem;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-// `;
-
 export const Title = styled.h2`
   display: none;
   &.active {
@@ -43,6 +33,9 @@ export const Title = styled.h2`
     color: #0bcbcc;
     span {
       color: #f18ce1;
+    }
+    @media (max-width: 460px) {
+      font-size: 3rem;
     }
   }
 `;
@@ -66,12 +59,14 @@ export const BtnSection = styled.div`
       display: block;
     }
   }
+  @media (max-width: 900px) {
+    display: none !important;
+  }
 `;
 
 export const Button = styled.div`
   width: 50px;
   height: 50px;
-  /* border: 1px solid red; */
   margin: 10px;
   img {
     width: 50px;
@@ -87,35 +82,43 @@ export const Button = styled.div`
   }
 `;
 
-export const Dropdown = styled.div`
-  width: 30%;
-  position: absolute;
-  top: 90px;
-  left: 0;
-  border: 3px solid #2129f7;
-  border-radius: 5px;
-  border-style: dashed;
-  background: #000000ca;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  transition: all 0.5s;
-  z-index: 999;
+export const MeniuDropdown = styled.div`
+  display: none;
+  @media (max-width: 900px) {
+    color: #2f5ef3;
+    padding: 20px 30px;
+    font-size: 2rem;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5.2rem;
+    height: 3rem;
+    border: 2px dashed #0bcbcc;
+    border-radius: 5px;
+    background-color: #000000ca;
+    transition-duration: 0.4s;
+    z-index: 999999;
+    position: absolute;
+    top: 25%;
+    left: 30px;
+    &.hiden {
+      display: none !important;
+    }
+  }
 `;
 
-export const MeniuDropdown = styled.div`
-  color: #ffffff;
-  background-color: #ffffff;
-  margin: 5px;
-  font-size: 2rem;
-  border-radius: 3px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 5.2rem;
-  height: 3rem;
-  border: 1px solid black;
-  background-color: #ffffff;
-  transition-duration: 0.4s;
+export const DropDownWrap = styled.div`
+  position: absolute;
+  top: 108%;
+
+  border: 2px dashed #f18ce1;
+  background-color: #000000ca;
+  overflow: hidden;
+  z-index: 999;
+  border-radius: 5px;
+  .hiden.active {
+    display: none !important;
+  }
 `;
