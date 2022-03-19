@@ -21,7 +21,7 @@ i18n
   .use(LanguageDetector)
   .init({
     resources,
-    supportedLngs: ["en", "hu", "ro", , "de", "fr"],
+    supportedLngs: ["en", "hu", "ro", "de", "fr"],
     fallbackLng: "en",
     debug: false,
     detection: {
