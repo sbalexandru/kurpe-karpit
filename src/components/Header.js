@@ -13,8 +13,8 @@ import {
 import { NavLink } from "react-router-dom";
 
 import "flag-icon-css/css/flag-icons.min.css";
-// import i18next from "i18next";
-// import cookies from "js-cookie";
+import i18next from "i18next";
+import cookies from "js-cookie";
 
 import { Images } from "./Images";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -25,7 +25,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
-  // const currentLanguage = cookies.get("i18next") || "en";
+  const currentLanguage = cookies.get("i18next") || "en";
   const [navbar, setNavbar] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
@@ -161,10 +161,12 @@ const Header = () => {
         <FontAwesomeIcon icon={faGlobeAmericas} className="fontIcon" />
         {languageMenuOpen &&
           languages.map(({ code, name, country_code }) => (
-            <LanguageBtn className={navbar ? "active" : "navbar"} key={code}>
+            <LanguageBtn key={code}>
               <LanguageItem
-                onClick={() => handleValueChange()}
-                // disabled={code === currentLanguage}
+                onClick={() =>
+                  i18next.changeLanguage(code) && handleValueChange()
+                }
+                disabled={code === currentLanguage}
               >
                 <span
                   className={`flag-icon flag-icon-${country_code} mx-1`}

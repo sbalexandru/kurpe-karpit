@@ -14,6 +14,7 @@ import {
 } from "./MainPage.styled";
 import { Images } from "../components/Images";
 import { Link } from "react-router-dom";
+import i18n from "../i18n";
 
 const MainPage = () => {
   return (
@@ -22,7 +23,7 @@ const MainPage = () => {
       <SecondImg>
         <AbautBox>
           <Title>Kurpe Istike</Title>
-          <TextAreea>Varok szabok mint az alat</TextAreea>
+          <TextAreea>{i18n.t("about.welcome")}</TextAreea>
         </AbautBox>
 
         <RightBox>
@@ -30,7 +31,7 @@ const MainPage = () => {
             <ImageBox src={Images.Wheel} alt="Wheel" />
             <TextBox>
               <Title>Kurpe Volan</Title>
-              <TextAreea>Eszt tekertd meg mint az alat</TextAreea>
+              <TextAreea>{i18n.t("mainPage.wheelAbout")}</TextAreea>
             </TextBox>
           </Link>
         </RightBox>
