@@ -38,11 +38,23 @@ const MainPage = () => {
 
         <LeftBox>
           <Link to="/KarpitPage">
-            <TextBox>
-              <Title>Kurpe Istike</Title>
-              <TextAreea>{i18n.t("mainPage.karpitAbout")}</TextAreea>
-            </TextBox>
-            <ImageBox src={Images.SeatLight2} alt="Karpit" />
+            {window.screen.width <= 360 ? (
+              <>
+                <ImageBox src={Images.SeatLight2} alt="Karpit" />
+                <TextBox>
+                  <Title>Kurpe Seat Karpit</Title>
+                  <TextAreea>{i18n.t("mainPage.karpitAbout")}</TextAreea>
+                </TextBox>
+              </>
+            ) : (
+              <>
+                <TextBox>
+                  <Title>Kurpe Seat Karpit</Title>
+                  <TextAreea>{i18n.t("mainPage.karpitAbout")}</TextAreea>
+                </TextBox>
+                <ImageBox src={Images.SeatLight2} alt="Karpit" />
+              </>
+            )}
           </Link>
         </LeftBox>
 
@@ -50,7 +62,7 @@ const MainPage = () => {
           <Link to="/SofaPage">
             <ImageBoxSofa src={Images.Sofa} alt="SofaBox" />
             <TextBox>
-              <Title>Kurpe Istike</Title>
+              <Title>Kurpe Sofa</Title>
               <TextAreea>{i18n.t("mainPage.sofaAbout")}</TextAreea>
             </TextBox>
           </Link>
