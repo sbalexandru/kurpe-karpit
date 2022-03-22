@@ -3,6 +3,11 @@
     "welcome": "Szabok - Varrók, mint az alat"
   },
   "mainPage": {
-    "wheelAbout": "Eszt tekerd meg mint az állat"
-  }
+    "wheelAbout": "Eszt tekerd meg mint az állat",
+    "karpitAbout": "Vezess bennem mint az állat",
+    "sofaAbout": "Supegy bele mint az állat"
+  },
+  "wheelPage": {},
+  "karpitPage": {},
+  "sofaPage": {}
 }

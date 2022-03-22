@@ -40,7 +40,7 @@ const MainPage = () => {
           <Link to="/KarpitPage">
             <TextBox>
               <Title>Kurpe Istike</Title>
-              <TextAreea>Supegy bele mint az alat</TextAreea>
+              <TextAreea>{i18n.t("mainPage.karpitAbout")}</TextAreea>
             </TextBox>
             <ImageBox src={Images.SeatLight2} alt="Karpit" />
           </Link>
@@ -51,7 +51,7 @@ const MainPage = () => {
             <ImageBoxSofa src={Images.Sofa} alt="SofaBox" />
             <TextBox>
               <Title>Kurpe Istike</Title>
-              <TextAreea>Supegy bele mint az alat</TextAreea>
+              <TextAreea>{i18n.t("mainPage.sofaAbout")}</TextAreea>
             </TextBox>
           </Link>
         </RightBox>

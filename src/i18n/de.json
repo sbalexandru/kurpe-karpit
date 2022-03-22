@@ -3,6 +3,11 @@
     "welcome": "Ich schneidere wie ein Tier"
   },
   "mainPage": {
-    "wheelAbout": "Es dreht sich wie ein Tier "
-  }
+    "wheelAbout": "Es dreht sich wie ein Tier ",
+    "karpitAbout": "Führe mich wie ein Tier ",
+    "sofaAbout": "Sitz in mir wie ein Tier "
+  },
+  "wheelPage": {},
+  "karpitPage": {},
+  "sofaPage": {}
 }

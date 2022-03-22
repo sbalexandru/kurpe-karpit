@@ -3,6 +3,11 @@
     "welcome": "Bat si ffut ca masina de cusut"
   },
   "mainPage": {
-    "wheelAbout": "Învârte asta ca un animal"
-  }
+    "wheelAbout": "Învârte asta ca un animal",
+    "karpitAbout": "Condu-mă ca un animal ",
+    "sofaAbout": "Aseaza-te in mine ca un animal"
+  },
+  "wheelPage": {},
+  "karpitPage": {},
+  "sofaPage": {}
 }

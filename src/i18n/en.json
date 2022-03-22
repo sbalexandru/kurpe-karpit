@@ -3,6 +3,11 @@
     "welcome": "I tailor like an animal"
   },
   "mainPage": {
-    "wheelAbout": "It spins like an animal "
-  }
+    "wheelAbout": "It spins like an animal ",
+    "karpitAbout": "Drive me like an animal ",
+    "sofaAbout": "Sit in me like an animal "
+  },
+  "wheelPage": {},
+  "karpitPage": {},
+  "sofaPage": {}
 }

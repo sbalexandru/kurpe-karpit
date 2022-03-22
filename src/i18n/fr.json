@@ -3,6 +3,11 @@
     "welcome": "Je taille comme un animal"
   },
   "mainPage": {
-    "wheelAbout": "Il tourne comme un animal "
-  }
+    "wheelAbout": "Il tourne comme un animal ",
+    "karpitAbout": "Guide-moi comme un animal ",
+    "sofaAbout": "Asseyez-vous en moi comme un animal "
+  },
+  "wheelPage": {},
+  "karpitPage": {},
+  "sofaPage": {}
 }
