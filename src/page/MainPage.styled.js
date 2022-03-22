@@ -74,6 +74,7 @@ export const Title = styled.h2`
 export const TextAreea = styled.p`
   color: white;
   font-size: 19px;
+  margin: 10px 0 20px 0;
 `;
 
 export const TextBox = styled.div`

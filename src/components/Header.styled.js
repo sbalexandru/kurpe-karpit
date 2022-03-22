@@ -163,7 +163,7 @@ export const LanguageItem = styled.div`
     height: 2.5rem;
   }
   p {
-    font-size: 1.3rem;
+    font-size: 2.3rem;
     margin: auto;
     /* padding: 3px; */
     color: #ffffff;

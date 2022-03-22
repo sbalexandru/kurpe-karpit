@@ -38,7 +38,7 @@ const MainPage = () => {
 
         <LeftBox>
           <Link to="/KarpitPage">
-            {window.screen.width <= 360 ? (
+            {window.screen.width <= 760 ? (
               <>
                 <ImageBox src={Images.SeatLight2} alt="Karpit" />
                 <TextBox>
