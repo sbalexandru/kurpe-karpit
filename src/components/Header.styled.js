@@ -144,6 +144,8 @@ export const LanguageBtn = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  background-color: #000000ca;
+  transition-duration: 0.4s;
   .hiden.active {
     display: none !important;
   }
