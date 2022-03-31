@@ -20,8 +20,9 @@ export const KarpitContainer = styled.div`
 
 export const Box = styled.div`
   width: 80%;
-  height: 600px;
-  overflow: hidden;
+  /* height: 600px; */
+  /* overflow: hidden; */
+  background-color: pink;
   border: 2px solid grey;
   margin: 20px auto;
   text-align: center;
@@ -49,9 +50,10 @@ export const ImageBox = styled.div`
   border: 1px solid black;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: stretch;
 `;
 
 export const Image = styled.img`
