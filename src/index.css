@@ -71,7 +71,9 @@ ul,
 ol {
   list-style-type: none;
 }
-
+.test {
+  font-size: 40px;
+}
 /* End Reset */
 
 /* Fonts import */

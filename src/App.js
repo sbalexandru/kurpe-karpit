@@ -2,9 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import MainPage from "./page/MainPage";
-import WheelPage from "./page/WheelPage";
-import KarpitPage from "./page/KarpitPage";
-import SofaPage from "./page/SofaPage";
+import { WheelPage, SofaPage, KarpitPage } from "./page/Pages";
 
 function App() {
   return (

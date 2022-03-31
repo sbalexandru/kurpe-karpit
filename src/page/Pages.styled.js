@@ -1,9 +1,19 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const WhellContainer = styled.div`
   width: 100%;
-  /* height: 1500px; */
-  background: yellow;
+  background-color: yellow;
+`;
+
+export const SofaContainer = styled.div`
+  width: 100%;
+  background-color: red;
+  height: 1500px;
+`;
+
+export const KarpitContainer = styled.div`
+  width: 100%;
+  background-color: green;
 `;
 
 export const Box = styled.div`
