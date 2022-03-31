@@ -6,12 +6,13 @@ import {
   Box,
   Title,
   Text,
+  TextBox,
   Image,
   ImageBox,
 } from "./Pages.styled";
 import { WheelImages } from "../components/WheelImages";
 import { KarpitImages } from "../components/KarpitImages";
-// import { SofaImages } from "../components/SofaImages"
+import { SofaImages } from "../components/SofaImages";
 // import i18n from "../i18n";
 
 // import "./index.css";
@@ -26,16 +27,23 @@ import { KarpitImages } from "../components/KarpitImages";
 export const WheelPage = () => {
   return (
     <WhellContainer>
-      <p className="test">test testes</p>
       <Box>
-        <Title>Title</Title>
-        <Text>audi valami</Text>
         <ImageBox>
           <Image src={WheelImages.Audi1} alt="audi" />
           <Image src={WheelImages.Audi2} alt="audi" />
           <Image src={WheelImages.Audi3} alt="audi" />
           <Image src={WheelImages.Audi4} alt="audi" />
         </ImageBox>
+        <TextBox>
+          <Title>Title</Title>
+          <Text>
+            Die Rondo Ganahl AG mit Stammsitz in Frastanz ist ein moderner
+            Industriebetrieb in Familienbesitz. Mit über 1.600 Mitarbeiter an
+            mehreren Standorten in Europa zählt der Spezialist für Papier,
+            Wellpappe, Verpackungen und Recycling zu den führenden Unternehmen
+            der Branche.
+          </Text>
+        </TextBox>
       </Box>
     </WhellContainer>
   );
@@ -48,7 +56,46 @@ export const WheelPage = () => {
 export const SofaPage = () => {
   return (
     <SofaContainer>
-      <h1>Sofa</h1>
+      <Box>
+        <ImageBox>
+          <Image src={SofaImages.Fotel} alt="Fotel" />
+          <Image src={SofaImages.FotelRetush} alt="Fotel" />
+          <Image src={SofaImages.Kanape} alt="kanape" />
+          <Image src={SofaImages.KanapeRetush} alt="kanape" />
+          <Image src={SofaImages.NagyKanape} alt="kanape" />
+          <Image src={SofaImages.NagyKanapeRetush} alt="kanape" />
+        </ImageBox>
+        <TextBox>
+          <Title>Sofa</Title>
+          <Text>
+            Die Rondo Ganahl AG mit Stammsitz in Frastanz ist ein moderner
+            Industriebetrieb in Familienbesitz. Mit über 1.600 Mitarbeiter an
+            mehreren Standorten in Europa zählt der Spezialist für Papier,
+            Wellpappe, Verpackungen und Recycling zu den führenden Unternehmen
+            der Branche.
+          </Text>
+        </TextBox>
+      </Box>
+
+      <Box>
+        <ImageBox>
+          <Image src={SofaImages.irodaSzek} alt="irodaSzek" />
+          <Image src={SofaImages.irodaSzekRetush} alt="irodaSzek" />
+          <Image src={SofaImages.konyhaSzek} alt="konyhaSzek" />
+          <Image src={SofaImages.konyhaSzekRetush} alt="konyhaSzek" />
+          <Image src={SofaImages.konyhaSzekRetushpar} alt="konyhaSzek" />
+        </ImageBox>
+        <TextBox>
+          <Title>Sofa</Title>
+          <Text>
+            Die Rondo Ganahl AG mit Stammsitz in Frastanz ist ein moderner
+            Industriebetrieb in Familienbesitz. Mit über 1.600 Mitarbeiter an
+            mehreren Standorten in Europa zählt der Spezialist für Papier,
+            Wellpappe, Verpackungen und Recycling zu den führenden Unternehmen
+            der Branche.
+          </Text>
+        </TextBox>
+      </Box>
     </SofaContainer>
   );
 };
@@ -60,12 +107,25 @@ export const SofaPage = () => {
 export const KarpitPage = () => {
   return (
     <KarpitContainer>
-      <h1>Karpitttt</h1>
-      <img src={KarpitImages.Suzuki1} alt="karpit" />
-      <img src={KarpitImages.Suzuki2} alt="karpit" />
-      <img src={KarpitImages.Suzuki3} alt="karpit" />
-      <img src={KarpitImages.Suzuki4} alt="karpit" />
-      <img src={KarpitImages.Suzuki5} alt="karpit" />
+      <Box>
+        <ImageBox>
+          <Image src={KarpitImages.Suzuki1} alt="karpit" />
+          <Image src={KarpitImages.Suzuki2} alt="karpit" />
+          <Image src={KarpitImages.Suzuki3} alt="karpit" />
+          <Image src={KarpitImages.Suzuki4} alt="karpit" />
+          <Image src={KarpitImages.Suzuki5} alt="karpit" />
+        </ImageBox>
+        <TextBox>
+          <Title>Karpit</Title>
+          <Text>
+            Die Rondo Ganahl AG mit Stammsitz in Frastanz ist ein moderner
+            Industriebetrieb in Familienbesitz. Mit über 1.600 Mitarbeiter an
+            mehreren Standorten in Europa zählt der Spezialist für Papier,
+            Wellpappe, Verpackungen und Recycling zu den führenden Unternehmen
+            der Branche.
+          </Text>
+        </TextBox>
+      </Box>
     </KarpitContainer>
   );
 };

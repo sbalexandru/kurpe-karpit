@@ -2,23 +2,34 @@ import styled from "styled-components";
 
 export const WhellContainer = styled.div`
   width: 100%;
+  padding: 20px 0;
   background-color: yellow;
 `;
 
 export const SofaContainer = styled.div`
   width: 100%;
+  padding: 20px 0;
   background-color: red;
-  height: 1500px;
 `;
 
 export const KarpitContainer = styled.div`
   width: 100%;
+  padding: 20px 0;
   background-color: green;
 `;
 
 export const Box = styled.div`
   width: 80%;
-  margin: auto;
+  height: 600px;
+  overflow: hidden;
+  border: 2px solid grey;
+  margin: 20px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
 `;
 
 export const Title = styled.h2`
@@ -29,11 +40,21 @@ export const Text = styled.p`
   font-size: 16px;
 `;
 
+export const TextBox = styled.div`
+  width: 40%;
+`;
+
 export const ImageBox = styled.div`
-  width: 100%;
+  width: 50%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 `;
 
 export const Image = styled.img`
   width: 90%;
-  margin: auto;
+  padding: 20px;
 `;
