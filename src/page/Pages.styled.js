@@ -22,6 +22,7 @@ export const Box = styled.div`
   width: 80%;
   /* height: 600px; */
   /* overflow: hidden; */
+  /* margin */
   background-color: pink;
   border: 2px solid grey;
   margin: 20px auto;
