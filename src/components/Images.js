@@ -10,6 +10,7 @@ import SeatLight from "../img/set2.png";
 import SeatLight2 from "../img/set1.png";
 import SofaNeon from "../img/sofa neon.png";
 import SofaNeon2 from "../img/sofa neon2.png";
+import UpArrow from "../img/arrow up.jpg";
 
 export const Images = {
   Sofa,
@@ -23,4 +24,5 @@ export const Images = {
   House,
   SecondBackImg,
   SofaNeon2,
+  UpArrow,
 };

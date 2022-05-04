@@ -84,7 +84,6 @@ export const TextBox = styled.div`
 export const RightBox = styled.div`
   width: 100%;
   margin: 100px;
-
   a {
     width: 50%;
     position: relative;

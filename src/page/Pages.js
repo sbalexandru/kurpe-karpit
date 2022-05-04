@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useCallback } from "react";
 import {
   WhellContainer,
   SofaContainer,
@@ -13,14 +13,8 @@ import {
 import { WheelImages } from "../components/WheelImages";
 import { KarpitImages } from "../components/KarpitImages";
 import { SofaImages } from "../components/SofaImages";
-// import i18n from "../i18n";
-
-// import "./index.css";
-// const WhellItem = () =>{
-//   let Whell1 =  [
-
-//   ]
-// }
+import Gallery from "react-photo-gallery";
+import Carousel, { Modal, ModalGateway } from "react-images";
 
 // ------------- Start Wheel Page ------------------
 
@@ -105,29 +99,103 @@ export const SofaPage = () => {
 // ------------- Start Karpit Page -----------------
 
 export const KarpitPage = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+  const [viewerIsOpen, setViewerIsOpen] = useState(false);
+
+  const openLightbox = useCallback((event, { KarpitImages, index }) => {
+    setCurrentImage(index);
+    setViewerIsOpen(true);
+  }, []);
+
+  const closeLightbox = () => {
+    setCurrentImage(0);
+    setViewerIsOpen(false);
+  };
+
+  const Test2 = [];
+  KarpitImages.forEach((data) => {
+    Test2.push(
+      <>
+        <Box>
+          <ImageBox key={data.id.key.toString()}>
+            <Gallery
+              photos={data.event}
+              direction={"row"}
+              onClick={openLightbox}
+              key={data.id.key.toString()}
+            />
+            {console.log("data index", data.id.key.toString())}
+            <ModalGateway>
+              {viewerIsOpen ? (
+                <Modal onClose={closeLightbox}>
+                  <Carousel
+                    key={data.id.key}
+                    currentIndex={currentImage}
+                    views={data.event.map((x) => ({
+                      ...x,
+                      srcset: x.srcSet,
+                      caption: x.title,
+                    }))}
+                  />
+                </Modal>
+              ) : null}
+            </ModalGateway>
+          </ImageBox>
+          <TextBox key={data.id.key.toString()}>
+            <Title>
+              {data.description.title}
+              {console.log("title", data.description.title)}
+            </Title>
+            <Text>{data.description.text}</Text>
+          </TextBox>
+        </Box>
+      </>
+    );
+  });
+
   return (
-    <KarpitContainer>
-      <Box>
-        <ImageBox>
-          <Image src={KarpitImages.Suzuki1} alt="karpit" />
-          <Image src={KarpitImages.Suzuki2} alt="karpit" />
-          <Image src={KarpitImages.Suzuki3} alt="karpit" />
-          <Image src={KarpitImages.Suzuki4} alt="karpit" />
-          <Image src={KarpitImages.Suzuki5} alt="karpit" />
-        </ImageBox>
-        <TextBox>
-          <Title>Karpit</Title>
-          <Text>
-            Die Rondo Ganahl AG mit Stammsitz in Frastanz ist ein moderner
-            Industriebetrieb in Familienbesitz. Mit über 1.600 Mitarbeiter an
-            mehreren Standorten in Europa zählt der Spezialist für Papier,
-            Wellpappe, Verpackungen und Recycling zu den führenden Unternehmen
-            der Branche.
-          </Text>
-        </TextBox>
-      </Box>
-    </KarpitContainer>
+    <>
+      {KarpitImages.length >= 1 ? (
+        <KarpitContainer>
+          {console.log("test 2", Test2)}
+          {console.log("test index", Test2.index)}
+
+          {Test2}
+        </KarpitContainer>
+      ) : (
+        console.log("test")
+      )}
+    </>
   );
 };
 
+// // ------------- Start Karpit Page -----------------
+
+// export const KarpitPage = () => {
+//   return (
+//     <KarpitContainer>
+//       <Box>
+//         <ImageBox>
+//           <Image src={KarpitImages.Suzuki1} alt="karpit" />
+//           <Image src={KarpitImages.Suzuki2} alt="karpit" />
+//           <Image src={KarpitImages.Suzuki3} alt="karpit" />
+//           <Image src={KarpitImages.Suzuki4} alt="karpit" />
+//           <Image src={KarpitImages.Suzuki5} alt="karpit" />
+//         </ImageBox>
+//         <TextBox>
+//           <Title>Karpit</Title>
+//           <Text>
+//             Die Rondo Ganahl AG mit Stammsitz in Frastanz ist ein moderner
+//             Industriebetrieb in Familienbesitz. Mit über 1.600 Mitarbeiter an
+//             mehreren Standorten in Europa zählt der Spezialist für Papier,
+//             Wellpappe, Verpackungen und Recycling zu den führenden Unternehmen
+//             der Branche.
+//           </Text>
+//         </TextBox>
+//       </Box>
+//     </KarpitContainer>
+//   );
+// };
+
+// // ------------- Start Karpit Page -----------------
 // ------------- Start Karpit Page -----------------

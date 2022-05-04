@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import MainPage from "./page/MainPage";
 import { WheelPage, SofaPage, KarpitPage } from "./page/Pages";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <>
             <Header />
             <MainPage />
+            <ScrollToTop />
             <Footer />
           </>
         }
@@ -24,6 +26,7 @@ function App() {
           <>
             <Header />
             <WheelPage />
+            <ScrollToTop />
             <Footer />
           </>
         }
@@ -34,6 +37,7 @@ function App() {
           <>
             <Header />
             <KarpitPage />
+            <ScrollToTop />
             <Footer />
           </>
         }
@@ -44,6 +48,7 @@ function App() {
           <>
             <Header />
             <SofaPage />
+            <ScrollToTop />
             <Footer />
           </>
         }

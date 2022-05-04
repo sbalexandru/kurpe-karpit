@@ -112,13 +112,9 @@ const Header = () => {
         className={navbar ? "active" : "hiden"}
       >
         {menuOpen === false ? (
-          <FontAwesomeIcon icon={faBars}>
-            {console.log("inchis")}
-          </FontAwesomeIcon>
+          <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>
         ) : (
-          <FontAwesomeIcon icon={faAlignCenter}>
-            {console.log("deschis")}{" "}
-          </FontAwesomeIcon>
+          <FontAwesomeIcon icon={faAlignCenter}></FontAwesomeIcon>
         )}
         {menuOpen && (
           <DropDownWrap className={navbar ? "active" : "navbar"}>
