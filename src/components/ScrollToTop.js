@@ -13,8 +13,8 @@ export default function ScrollToTop() {
     }
   };
 
-  // const setStiky = () => {
-  //   if (window.scrollX < 100) {
+  // const stikyBottom = () => {
+  //   if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
   //     setIsStiky(true);
   //   } else {
   //     setIsStiky(false);
@@ -31,30 +31,21 @@ export default function ScrollToTop() {
     window.addEventListener(
       "scroll",
       toggleVisibility
-      //  setStiky
+      //  stikyBottom
     );
     return () => {
       window.removeEventListener(
         "scroll",
         toggleVisibility
-        //  setStiky
+        //  stikyBottom
       );
     };
   });
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", setStiky);
-  //   return () => {
-  //     window.removeEventListener("scroll", setStiky);
-  //   };
-  // });
 
   return (
     <ScrollBtn
       onClick={scrollToTop}
       className={isVisible ? "opacity-100" : "opacity-0"}
-    >
-      {console.log("xasa", isVisible ? "opacity-100" : "opacity-0")}
-    </ScrollBtn>
+    ></ScrollBtn>
   );
 }

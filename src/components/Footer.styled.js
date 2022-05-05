@@ -5,7 +5,7 @@ export const Container = styled.div`
   width: 100%;
   height: 12rem;
   border: 3px solid #2129f7;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   border-style: dashed;
   background-color: black;
   display: flex;
