@@ -54,7 +54,6 @@ export const KarpitImages = [
   },
   {
     id: { key: 2 },
-
     event: [
       {
         src: Audi1,
@@ -85,7 +84,6 @@ export const KarpitImages = [
   },
   {
     id: { key: 3 },
-
     event: [
       {
         src: KanapeRetush,
@@ -114,36 +112,35 @@ export const KarpitImages = [
     },
   },
 
-  // {
-  //   id: { key: 4 },
-
-  //   event: [
-  //     {
-  //       src: Audi2,
-  //       width: 4,
-  //       height: 2.5,
-  //     },
-  //     {
-  //       src: Suzuki5,
-  //       width: 4,
-  //       height: 2.5,
-  //     },
-  //     {
-  //       src: Audi2,
-  //       width: 4,
-  //       height: 2.5,
-  //     },
-  //     {
-  //       src: Suzuki5,
-  //       width: 4,
-  //       height: 2.5,
-  //     },
-  //   ],
-  //   description: {
-  //     title: "Szuzuki 3",
-  //     text: i18n.t("about.welcome"),
-  //   },
-  // },
+  {
+    id: { key: 4 },
+    event: [
+      {
+        src: Audi2,
+        width: 4,
+        height: 2.5,
+      },
+      {
+        src: Suzuki5,
+        width: 4,
+        height: 2.5,
+      },
+      {
+        src: Audi2,
+        width: 4,
+        height: 2.5,
+      },
+      {
+        src: Suzuki5,
+        width: 4,
+        height: 2.5,
+      },
+    ],
+    description: {
+      title: "Szuzuki 3",
+      text: i18n.t("about.welcome"),
+    },
+  },
   // {
   //   id: { key: 5 },
 
