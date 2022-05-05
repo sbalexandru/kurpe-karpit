@@ -3,6 +3,7 @@ import { ScrollBtn } from "./ScrollToTop.styled";
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
+  // const [isStiky, setIsStiky] = useState(false);
 
   const toggleVisibility = () => {
     if (window.pageYOffset > 100) {
@@ -12,6 +13,14 @@ export default function ScrollToTop() {
     }
   };
 
+  // const setStiky = () => {
+  //   if (window.scrollX < 100) {
+  //     setIsStiky(true);
+  //   } else {
+  //     setIsStiky(false);
+  //   }
+  // };
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -19,12 +28,26 @@ export default function ScrollToTop() {
     });
   };
   useEffect(() => {
-    window.addEventListener("scroll", toggleVisibility);
-
+    window.addEventListener(
+      "scroll",
+      toggleVisibility
+      //  setStiky
+    );
     return () => {
-      window.removeEventListener("scroll", toggleVisibility);
+      window.removeEventListener(
+        "scroll",
+        toggleVisibility
+        //  setStiky
+      );
     };
   });
+
+  // useEffect(() => {
+  //   window.addEventListener("scroll", setStiky);
+  //   return () => {
+  //     window.removeEventListener("scroll", setStiky);
+  //   };
+  // });
 
   return (
     <ScrollBtn

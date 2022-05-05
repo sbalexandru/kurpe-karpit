@@ -25,7 +25,8 @@ export const ScrollBtn = styled.div`
     }
   }
   &.opacity-0 {
-    display: none;
+    opacity: 0;
+    bottom: -60px;
     transition: all 0.5s;
   }
 `;
