@@ -12,6 +12,11 @@ import Audi2 from "../img/wheel/audi2.jpg";
 import Audi3 from "../img/wheel/audi3.jpg";
 import Audi4 from "../img/wheel/audi4.jpg";
 
+import KanapeRetush from "../img/sofa/2kanape (2).jpg";
+import Kanape from "../img/sofa/2kanape (1).jpg";
+import NagyKanape from "../img/sofa/3kanape (1).jpg";
+import NagyKanapeRetush from "../img/sofa/3kanape (2).jpg";
+
 export const KarpitImages = [
   {
     id: { key: 1 },
@@ -37,7 +42,7 @@ export const KarpitImages = [
         height: 2.5,
       },
       {
-        src: Suzuki4,
+        src: Suzuki5,
         width: 4,
         height: 2.5,
       },
@@ -83,126 +88,127 @@ export const KarpitImages = [
 
     event: [
       {
-        src: Suzuki1,
+        src: KanapeRetush,
         width: 4,
         height: 2.5,
       },
       {
-        src: Suzuki2,
+        src: Kanape,
         width: 4,
         height: 2.5,
       },
       {
-        src: Suzuki3,
+        src: NagyKanape,
         width: 4,
         height: 2.5,
       },
       {
-        src: Suzuki5,
+        src: NagyKanapeRetush,
         width: 4,
         height: 2.5,
       },
     ],
     description: {
-      title: "Szuzuki 2",
+      title: "NagyKanapeRetush 2",
       text: i18n.t("about.welcome"),
     },
   },
-  {
-    id: { key: 4 },
 
-    event: [
-      {
-        src: Audi2,
-        width: 4,
-        height: 2.5,
-      },
-      {
-        src: Suzuki5,
-        width: 4,
-        height: 2.5,
-      },
-      {
-        src: Audi2,
-        width: 4,
-        height: 2.5,
-      },
-      {
-        src: Suzuki5,
-        width: 4,
-        height: 2.5,
-      },
-    ],
-    description: {
-      title: "Szuzuki 3",
-      text: i18n.t("about.welcome"),
-    },
-  },
-  {
-    id: { key: 5 },
+  // {
+  //   id: { key: 4 },
 
-    event: [
-      {
-        src: Suzuki1,
-        width: 4,
-        height: 2.5,
-      },
+  //   event: [
+  //     {
+  //       src: Audi2,
+  //       width: 4,
+  //       height: 2.5,
+  //     },
+  //     {
+  //       src: Suzuki5,
+  //       width: 4,
+  //       height: 2.5,
+  //     },
+  //     {
+  //       src: Audi2,
+  //       width: 4,
+  //       height: 2.5,
+  //     },
+  //     {
+  //       src: Suzuki5,
+  //       width: 4,
+  //       height: 2.5,
+  //     },
+  //   ],
+  //   description: {
+  //     title: "Szuzuki 3",
+  //     text: i18n.t("about.welcome"),
+  //   },
+  // },
+  // {
+  //   id: { key: 5 },
 
-      {
-        src: Suzuki2,
-        width: 4,
-        height: 2.5,
-      },
-      {
-        src: Suzuki5,
-        width: 4,
-        height: 2.5,
-      },
-      {
-        src: Suzuki5,
-        width: 4,
-        height: 2.5,
-      },
-    ],
-    description: {
-      title: "Szuzuki 4",
-      text: i18n.t("about.welcome"),
-    },
-  },
-  {
-    id: { key: 6 },
+  //   event: [
+  //     {
+  //       src: Suzuki1,
+  //       width: 4,
+  //       height: 2.5,
+  //     },
 
-    event: [
-      {
-        src: Audi2,
-        width: 4,
-        height: 2.5,
-      },
+  //     {
+  //       src: Suzuki2,
+  //       width: 4,
+  //       height: 2.5,
+  //     },
+  //     {
+  //       src: Suzuki5,
+  //       width: 4,
+  //       height: 2.5,
+  //     },
+  //     {
+  //       src: Suzuki5,
+  //       width: 4,
+  //       height: 2.5,
+  //     },
+  //   ],
+  //   description: {
+  //     title: "Szuzuki 4",
+  //     text: i18n.t("about.welcome"),
+  //   },
+  // },
+  // {
+  //   id: { key: 6 },
 
-      {
-        src: Audi4,
-        width: 4,
-        height: 2.5,
-      },
-      {
-        src: Suzuki3,
-        width: 4,
-        height: 2.5,
-      },
-      {
-        src: Audi1,
-        width: 4,
-        height: 2.5,
-      },
-      {
-        src: Suzuki5,
-        width: 4,
-        height: 2.5,
-      },
-    ],
-    description: {
-      title: "Szuzuki 5",
-      text: i18n.t("about.welcome"),
-    },
-  },
+  //   event: [
+  //     {
+  //       src: Audi2,
+  //       width: 4,
+  //       height: 2.5,
+  //     },
+
+  //     {
+  //       src: Audi4,
+  //       width: 4,
+  //       height: 2.5,
+  //     },
+  //     {
+  //       src: Suzuki3,
+  //       width: 4,
+  //       height: 2.5,
+  //     },
+  //     {
+  //       src: Audi1,
+  //       width: 4,
+  //       height: 2.5,
+  //     },
+  //     {
+  //       src: Suzuki5,
+  //       width: 4,
+  //       height: 2.5,
+  //     },
+  //   ],
+  //   description: {
+  //     title: "Szuzuki 5",
+  //     text: i18n.t("about.welcome"),
+  //   },
+  // },
 ];

@@ -102,7 +102,7 @@ export const KarpitPage = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
-  const openLightbox = useCallback((event, { KarpitImages, index }) => {
+  const openLightbox = useCallback((_event, { KarpitImages, index }) => {
     setCurrentImage(index);
     setViewerIsOpen(true);
   }, []);
@@ -112,24 +112,23 @@ export const KarpitPage = () => {
     setViewerIsOpen(false);
   };
 
-  const Test2 = [];
+  const ImageEvent = [];
   KarpitImages.forEach((data) => {
-    Test2.push(
+    ImageEvent.push(
       <>
         <Box>
-          <ImageBox key={data.id.key.toString()}>
+          <ImageBox>
             <Gallery
               photos={data.event}
               direction={"row"}
               onClick={openLightbox}
-              key={data.id.key.toString()}
             />
-            {console.log("data index", data.id.key.toString())}
+
             <ModalGateway>
               {viewerIsOpen ? (
                 <Modal onClose={closeLightbox}>
                   <Carousel
-                    key={data.id.key}
+                    key={currentImage}
                     currentIndex={currentImage}
                     views={data.event.map((x) => ({
                       ...x,
@@ -141,11 +140,8 @@ export const KarpitPage = () => {
               ) : null}
             </ModalGateway>
           </ImageBox>
-          <TextBox key={data.id.key.toString()}>
-            <Title>
-              {data.description.title}
-              {console.log("title", data.description.title)}
-            </Title>
+          <TextBox>
+            <Title>{data.description.title}</Title>
             <Text>{data.description.text}</Text>
           </TextBox>
         </Box>
@@ -156,12 +152,7 @@ export const KarpitPage = () => {
   return (
     <>
       {KarpitImages.length >= 1 ? (
-        <KarpitContainer>
-          {console.log("test 2", Test2)}
-          {console.log("test index", Test2.index)}
-
-          {Test2}
-        </KarpitContainer>
+        <KarpitContainer>{ImageEvent}</KarpitContainer>
       ) : (
         console.log("test")
       )}
