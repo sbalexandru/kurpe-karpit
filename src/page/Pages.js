@@ -102,6 +102,7 @@ export const KarpitPage = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
+  // const openLightbox = useCallback((_ImageTest, index) => {
   const openLightbox = useCallback((_event, { KarpitImages, index }) => {
     setCurrentImage(index);
     setViewerIsOpen(true);
@@ -112,11 +113,14 @@ export const KarpitPage = () => {
     setViewerIsOpen(false);
   };
 
+  // var ImageTest = KarpitImages[0];
+
   const ImageEvent = [];
   KarpitImages.forEach((data) => {
     ImageEvent.push(
       <>
         <Box>
+          {/* {console.log(ImageTest)} */}
           <ImageBox>
             <Gallery
               photos={data.event}
