@@ -101,9 +101,12 @@ export const SofaPage = () => {
 export const KarpitPage = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
+  // var imgIndex = KarpitImages[0].id if(KarpitImages[0].id == KarpitImages[0].length){KarpitImages[0].id++} ;
+  // const test  if(KarpitImages[0].id == KarpitImages[0].length){KarpitImages[0].id++}
 
   // const openLightbox = useCallback((_ImageTest, index) => {
-  const openLightbox = useCallback((_event, { KarpitImages, index }) => {
+  const openLightbox = useCallback((_event, { event, index }) => {
+    console.log("sus", _event, index);
     setCurrentImage(index);
     setViewerIsOpen(true);
   }, []);
@@ -116,40 +119,36 @@ export const KarpitPage = () => {
   // var ImageTest = KarpitImages[0];
 
   const ImageEvent = [];
-  KarpitImages.forEach((data) => {
+  KarpitImages.forEach((data, index) => {
     ImageEvent.push(
-      <>
-        <Box>
-          {/* {console.log(ImageTest)} */}
-          <ImageBox>
-            <Gallery
-              photos={data.event}
-              direction={"row"}
-              onClick={openLightbox}
-            />
-
-            <ModalGateway>
-              {viewerIsOpen ? (
-                <Modal onClose={closeLightbox}>
-                  <Carousel
-                    key={currentImage}
-                    currentIndex={currentImage}
-                    views={data.event.map((x) => ({
-                      ...x,
-                      srcset: x.srcSet,
-                      caption: x.title,
-                    }))}
-                  />
-                </Modal>
-              ) : null}
-            </ModalGateway>
-          </ImageBox>
-          <TextBox>
-            <Title>{data.description.title}</Title>
-            <Text>{data.description.text}</Text>
-          </TextBox>
-        </Box>
-      </>
+      <Box key={"unique" + index}>
+        {/* {console.log("unique" + index)} */}
+        <ImageBox>
+          <Gallery
+            photos={data.event}
+            direction={"row"}
+            onClick={openLightbox}
+          />
+          <ModalGateway>
+            {viewerIsOpen ? (
+              <Modal onClose={closeLightbox}>
+                <Carousel
+                  currentIndex={currentImage + index}
+                  views={data.event.map((x) => ({
+                    ...x,
+                    srcset: x.srcSet,
+                    caption: x.title,
+                  }))}
+                />
+              </Modal>
+            ) : null}
+          </ModalGateway>
+        </ImageBox>
+        <TextBox>
+          <Title>{data.description.title}</Title>
+          <Text>{data.description.text}</Text>
+        </TextBox>
+      </Box>
     );
   });
 
