@@ -106,7 +106,8 @@ export const KarpitPage = () => {
 
   // const openLightbox = useCallback((_ImageTest, index) => {
   const openLightbox = useCallback((_event, { event, index }) => {
-    console.log("sus", _event, index);
+    // console.log("event", _event);
+    // console.log("index", index);
     setCurrentImage(index);
     setViewerIsOpen(true);
   }, []);
